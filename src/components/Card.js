@@ -15,8 +15,8 @@ class Card extends React.Component {
         let itemStyles = {  background: getRandomColor()  }
 
         return <li>
-                <div className="card col-sm-3" onClick={() => browserHistory.push('/Note')}>
-                    {this.props.link.indexOf("http") == 0 ? <img className="card-img-top centerImage" src={this.props.link} alt="Note Image"/> : <div style={ itemStyles } id="rectangle"></div>}
+                <div className="card col-sm-3" onClick={() => window.open(this.props.link,'_blank')}>
+                    {this.props.link.match(/\.(jpeg|jpg|gif|png)$/) ? <img className="card-img-top centerImage" src={this.props.link} alt="Note Image"/> : <div style={ itemStyles } id="rectangle"></div>}
                     <div className="card-block">
                         <h4 className="card-title text-center">{this.props.title}</h4>
                         <p className="card-text">{this.props.body}</p>
