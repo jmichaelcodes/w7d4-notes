@@ -1,7 +1,7 @@
 import React from 'react'
 import { browserHistory } from 'react-router'
 import { connect } from 'react-redux'
-import { store } from 'store'
+import store from 'store'
 
 class Note extends React.Component {
     constructor(props) {
@@ -32,8 +32,6 @@ class Note extends React.Component {
     }
 
     render() {
-        var store = require('store')
-
         var notes = store.get('notes')
 
         if (!notes) {
