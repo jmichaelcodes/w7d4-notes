@@ -1,20 +1,15 @@
 import React from 'react'
 import { browserHistory } from 'react-router'
 import { connect } from 'react-redux'
-import { store } from 'store'
+import store from 'store'
 import Note from './Note'
 import Card from './Card'
 
 
 
 class Main extends React.Component {
-    constructor(props) {
-        super(props)
-    }
-
 
     render() {
-        var store = require('store')
 
         if (store.get('notes') === undefined) {
         return  <div>
